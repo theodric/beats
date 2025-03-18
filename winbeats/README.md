@@ -24,4 +24,5 @@ Building:
 `cmake --build . --config Release`  
 
 Installation (needs an Administrator-elevated "Developer Command Prompt for VS 2022"):  
-`cmake --install . --prefix C:\Program Files\Beats`
+`cmake --install . --prefix "C:\Program Files\Beats"`  
+*(this will install it into C:\Program Files\Beats\bin, so make sure to add that path to your PATH environment variable)*
