@@ -1,5 +1,5 @@
 # cbeats
-Swatch beat time in (gag) C++ for (puke!) *Windows*
+Swatch beat time in (gag) C++ for (puke!) *Windows* 64-bit
 
 Oh God, Why Am I Doing This?  
 * Uses Windows' cursed native time API instead of blessed POSIX calls
