@@ -3,19 +3,14 @@ Swatch beat time in x86_64 assembly (NASM format)
 
 ## Overview
 This assembly version has some interesting features:
-* Uses direct Linux syscalls instead of libc functions
-* Performs floating-point calculations using SSE2 instructions (xmm registers)
-* Implements its own integer-to-string conversion routine
-* Uses no external dependencies - it's a completely standalone binary
-* Should be extremely fast as it's all native code
-
-## Some technical notes about the implementation:
+* Extremely fast
+* No external dependencies - completely standalone
+* Uses direct Linux syscalls instead of libc functions to save precious nanoseconds (Grace Hopper would approve)
+* Performs floating-point calculations using SSE2 instructions (xmm registers) to save precious nanoseconds (idem)
+* Implements its own integer-to-string conversion routine to add complexity and reduce readability
 * Uses clock_gettime(CLOCK_REALTIME) syscall to get the current time
-* Handles UTC+1 by adding 3600 seconds to the current time
-* Uses SSE2 floating-point division for the beats calculation
-* Formats the output with exactly 3 decimal places
-* Uses multiple write syscalls to output the result (one each for the @ symbol, number, and newline)
-* The output format is identical to the Python3 and C versions: "@XXX.XXX" represents the current beat time.
+* Handles UTC+1 by adding 3600 seconds to the current time. Higher math is for physicists.
+* The output format is identical to the Python3 and C versions: "@XXX.XXX" represents the current beat time to a frankly pointless level of resolution.
 
 ## Building and Running
 Requires `nasm`.  
