@@ -20,7 +20,7 @@ This assembly version has some interesting features:
 ## Building and Running
 **Do the usual**  
 
-`make
-./beats`
-*...and if desired...*
+`make`  
+`./beats`  
+*...and if desired...*  
 `[sudo] make install`
