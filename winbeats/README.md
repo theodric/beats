@@ -1,5 +1,6 @@
-# cbeats
-Swatch beat time in (gag) C++ for (puke!) *Windows* 64-bit
+# winbeats
+Swatch beat time in (gag) C++ for (puke!) *Windows 64-bit* operating systems.  
+I decided not to call it seapeepeebeats. You're welcome.  
 
 Oh God, Why Am I Doing This?  
 * Uses Windows' cursed native time API instead of blessed POSIX calls
