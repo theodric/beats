@@ -1,5 +1,6 @@
 # beats
-Swatch Internet Time 'beats' for the Linux CLI in Python, C, x86_64 assembly, and aarch64 (Raspberry Pi 4) assembly
+Swatch Internet Time 'beats' for the Linux CLI in Python, C, x86_64 assembly, and aarch64 (Raspberry Pi 4) assembly  
+For some reason, I've also included a Windows CLI version. God help us all.  
 
 Exactly what it says on the tin: now you can get the current beat on the CLI.  
 More detailed READMEs for each of the three versions are available in their respective subdirectories.
