@@ -36,15 +36,13 @@ public:
         FileTimeToSystemTime(&ftBiel, &bielTime);
 
         // Calculate seconds since midnight
-        int seconds = (bielTime.wHour * 3600) +
-                     (bielTime.wMinute * 60) +
-                     bielTime.wSecond;
-        int milliseconds = bielTime.wMilliseconds;
+        double seconds = (bielTime.wHour * 3600.0) +
+                        (bielTime.wMinute * 60.0) +
+                        bielTime.wSecond +
+                        (bielTime.wMilliseconds / 1000.0);
 
         // Convert to beats (1 beat = 86.4 seconds)
-        double beats = (seconds * 1000.0 + milliseconds) / 86400.0;
-        
-        return beats * BEATS_PER_DAY;
+        return (seconds / 86.4);
     }
 };
 
@@ -65,4 +63,4 @@ int main() {
         std::cerr << "Error: " << e.what() << std::endl;
         return 1;
     }
-}
+} 
