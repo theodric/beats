@@ -19,6 +19,8 @@
 .equ SYS_WRITE, 64
 .equ SYS_EXIT, 93
 .equ CLOCK_REALTIME, 0
+.equ SECONDS_PER_DAY, 86400
+.equ UTC_OFFSET, 3600
 
 _start:
     // Get current time using clock_gettime(CLOCK_REALTIME)
@@ -31,10 +33,13 @@ _start:
     ldr x0, [x1]                // Load seconds from timespec
 
     // Convert to UTC+1 by adding 3600 seconds
-    add x0, x0, #3600
+    mov x1, #UTC_OFFSET
+    add x0, x0, x1
 
     // Divide by 86400 to get days since epoch
-    mov x2, #86400
+    // Load 86400 using movz/movk
+    movz x2, #0x5180           // Lower 16 bits of 86400 (20864)
+    movk x2, #0x0001, lsl #16  // Upper 16 bits of 86400 (1)
     udiv x3, x0, x2            // x3 = days
     msub x0, x3, x2, x0        // x0 = seconds into current day
 
