@@ -9,6 +9,9 @@ Oh God, Why Am I Doing This?
 * UTF-8 console output support because complicated
 * CMake-based build system instead of Make because Windows
 
+## Please enjoy the binary release
+In the interest of facilitating use of this tool by Windows people, I've provided a binary build in this repo (beats.exe) which I swear does not have a trojan in it as far as I can remember, proabably. Use it, or don't, it's your call. You can always build from source.  
+
 ## Building and Running
 Needs CMake and Visual Studio 2022 (including the Build Tools) to build, so get those:  
 `winget install Kitware.CMake`  
