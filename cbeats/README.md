@@ -10,7 +10,7 @@ The C version has some key differences from the Python version:
 ## Building and Running
 **Do the usual**  
 
-`make
-./beats`
-*...and if desired...*
-`[sudo] make install`
+`make`  
+`./beats`  
+*...and if desired...*  
+`[sudo] make install`  
