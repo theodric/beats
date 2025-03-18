@@ -10,7 +10,12 @@ Oh God, Why Am I Doing This?
 * CMake-based build system instead of Make because Windows
 
 ## Building and Running
-Needs CMake to build, so get that, and then:  
+Needs CMake and Ninja to build, so get that:  
+`winget install Kitware.CMake`  
+`winget install Ninja-build.Ninja`  
+`winget install Microsoft.VisualStudio.2022.BuildTools`  
+
+Then:  
 
 Building:  
 `mkdir build`  
