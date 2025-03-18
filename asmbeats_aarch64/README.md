@@ -14,6 +14,9 @@ Spiritually the same as the x86_64 ASM version, but:
 * etc. etc. etc.
 
 ## Building and Running
+Requires the GNU Assembler `as` from GNU Binutils, located in a package called `binutils` on Debian.  
+Install it first, then:  
+
 **Do the usual**  
 
 `make`  
