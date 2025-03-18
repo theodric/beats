@@ -21,7 +21,8 @@ Needs CMake and Visual Studio 2022 (including the Build Tools) to build, so get 
 Then:  
 
 Building:  
-*Open a "Developer Command Prompt for VS 2022", then run*
+
+*Open a "Developer Command Prompt for VS 2022", then run*  
 `mkdir build`  
 `cd build`  
 `cmake ..`  
