@@ -18,6 +18,9 @@ This assembly version has some interesting features:
 * The output format is identical to the Python3 and C versions: "@XXX.XXX" represents the current beat time.
 
 ## Building and Running
+Requires `nasm`! Install it however you would normally install things.  
+Then:  
+
 **Do the usual**  
 
 `make`  
