@@ -10,18 +10,18 @@ Oh God, Why Am I Doing This?
 * CMake-based build system instead of Make because Windows
 
 ## Building and Running
-Needs CMake and Ninja to build, so get that:  
+Needs CMake and Visual Studio 2022 (including the Build Tools) to build, so get those:  
 `winget install Kitware.CMake`  
-`winget install Ninja-build.Ninja`  
-`winget install Microsoft.VisualStudio.2022.BuildTools`  
+`winget install --id=Microsoft.VisualStudio.2022.Community -e`  
 
 Then:  
 
 Building:  
+*Open a "Developer Command Prompt for VS 2022", then run*
 `mkdir build`  
 `cd build`  
-`cmake -G "Ninja" ..`  
+`cmake ..`  
 `cmake --build . --config Release`  
 
-Installation:  
+Installation (needs an Administrator-elevated "Developer Command Prompt for VS 2022"):  
 `cmake --install . --prefix C:\Program Files\Beats`
